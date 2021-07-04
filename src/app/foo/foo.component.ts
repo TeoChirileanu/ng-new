@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {CountService} from "../services/count.service";
 
 @Component({
   selector: 'app-foo',
@@ -7,16 +8,7 @@ import { Component} from '@angular/core';
 })
 export class FooComponent {
 
-  counter: number  = 0;
-
-  emojis: string[] = [' 🐭 ', ' 🦢 ', '🙀'];
-
-  public IncrementCounter(): void {
-    this.counter++;
-  }
-
-  public IsCounterGreaterThan10(): boolean {
-    return this.counter > 10;
-  }
+ constructor(public countService: CountService) {
+ }
 
 }
