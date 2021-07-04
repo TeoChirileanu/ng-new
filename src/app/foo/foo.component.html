@@ -1,0 +1,9 @@
+<p>{{counter}}</p>
+
+<button (click)="IncrementCounter()">👍</button>
+
+<p *ngIf="IsCounterGreaterThan10()">Counter is over 10</p>
+
+<p *ngFor="let emoji of emojis">
+  {{emoji}}
+</p>
